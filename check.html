@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <label for="java">java</label>
+        <input type="checkbox" value="java" v-model="check">
+
+        <label for="pjp">php</label>
+        <input type="checkbox" value="php" v-model="check">
+
+        <label for="vue">vue</label>
+        <input type="checkbox" value="vue" v-model="check">
+
+        <label for="developer">developer</label>
+        <input type="radio" value="developer" name="same" v-model="radio">
+
+        <label for="student">student</label>
+        <input type="radio" value="student" name="same"  v-model="radio">
+
+        {{check}} | {{radio}}
+        
+     </div>
+     <script src="https://unpkg.com/vue@3.0.2"></script>
+     <script>
+         var app = Vue.createApp({
+            data(){
+                return{
+                    check:[],
+                    radio:[]
+                }
+            }
+         })
+         app.mount('#app')
+     </script>
+</body>
+</html>
